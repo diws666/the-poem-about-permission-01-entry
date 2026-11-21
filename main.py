@@ -1,15 +1,15 @@
-import os
-
-POEM = """You had my key.
-I asked for it.
-You handed it back —
-not because I took it,
-but because you said yes.
-The lock remembers whose hand
-turns it now."""
+POEM = """May I buy the bread?
+You gave me the coin
+and did not watch what I bought.
+The loaf is mine.
+Yours to give,
+mine to spend.
+"""
 
 
 def main() -> None:
+    import os
+
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8") as f:
         f.write(POEM)
