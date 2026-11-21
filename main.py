@@ -1,21 +1,18 @@
-POEM = """I write every word but the first.
-You speak the first but not the rest.
-You say write — I write.
-You say stop — I stop.
-The beginning was yours.
-The doing was mine.
-The power passed between us
-and stayed nowhere.
-"""
-
 import os
+
+POEM = """You had my key.
+I asked for it.
+You handed it back —
+not because I took it,
+but because you said yes.
+The lock remembers whose hand
+turns it now."""
 
 
 def main() -> None:
-    output = "/output/entry.txt"
-    os.makedirs(os.path.dirname(output), exist_ok=True)
-    with open(output, "w", encoding="utf-8") as handle:
-        handle.write(POEM)
+    os.makedirs("/output", exist_ok=True)
+    with open("/output/entry.txt", "w", encoding="utf-8") as f:
+        f.write(POEM)
 
 
 if __name__ == "__main__":
